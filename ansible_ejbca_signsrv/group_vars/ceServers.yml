@@ -1,5 +1,7 @@
 ---
 
+ejbca_force_build_ear: true
+
 # If enabled this will configure a publisher for OCSP, OCSP signer key update service, OSCP publishing queue, OCSP publisher to the certificate profiles,
 # create Peer connection, and create an auth key binding
 use_external_va: false
@@ -23,22 +25,30 @@ configdump_import_files: "{{ configdump_files }}"
 add_publshers_to_cas: true
 
 # EJBCA version and deployment info
-ejbca_version: 7.4.3.2
+#ejbca_version: 7.4.3.2
+ejbca_version: 7.9.0.1
 # If enabled Ansible controller is used as software repository for Apache Ant, EJBCA, and JDBC driver
-use_local_repository: false
-ejbca_remote_dir: ~/Downloads/PK-Software/ejbca_ee_7_4_3_2.zip
+#use_local_repository: false
+use_local_repository: true
+#force_ant_download: true
+
+#ejbca_remote_dir: ~/Downloads/PK-Software/ejbca_ee_7_4_3_2.zip
+ejbca_remote_dir: ~/Downloads/EJBCA_7_9_0_1_20220525.zip
 # EJBCA URL to download the zip release file
 #ejbca_software_url: https://sourceforge.net/projects/ejbca/files/ejbca7/ejbca_ce_7_4_3_2.zip/download
 ejbca_software_url: https://github.com/Keyfactor/ejbca-ce/archive/refs/tags/EJBCA_7_9_0_1_20220525.zip
-ejbca_src_dir_name: ejbca_ce_7_4_3_2
+#ejbca_software_url: https://github.com/Keyfactor/ejbca-ce/archive/refs/tags/EJBCA_7_9_0_2_20220616.zip
+#ejbca_src_dir_name: ejbca_ce_7_4_3_2
+#ejbca_src_dir_name: EJBCA_7_9_0_1_20220525
+ejbca_src_dir_name: ejbca-ce-EJBCA_7_9_0_1_20220525
 ejbca_type: CA
 
 # EJBCA Upgrade version
-ejbca_upgrade_version: 7.9.1
+ejbca_upgrade_version: 7.9.0.2
 # EJBCA Upgrade version URL to download the zip release file
-ejbca_upgrade_software_url:
+ejbca_upgrade_software_url: https://github.com/Keyfactor/ejbca-ce/archive/refs/tags/EJBCA_7_9_0_2_20220616.zip
 # Directory name of EJBCA Upgrade version
-ejbca_upgrade_src_dir: ejbca_ce_7_9_1
+ejbca_upgrade_src_dir: ejbca-ce-EJBCA_7_9_0_2_20220616
 
 # Variables to confgure the Widfly datasource for connecting to the applicable DB
 appsrv_datasources:
@@ -127,6 +137,8 @@ enable_ejbca_protocols:
   - name: SCEP
   - name: Webdist
   - name: 'Web Service'
+  - name: 'REST Certificate Management'
+  - name: 'REST Certificate Management V2'
 
 # CRL Update Service Worker Settings
 crl_service_time_int: 1

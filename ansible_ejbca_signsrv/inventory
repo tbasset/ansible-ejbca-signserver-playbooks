@@ -59,7 +59,7 @@ all:
     ceSignServers:
       hosts:
         cess01:
-          ansible_host: 172.16.170.179
+          ansible_host: 192.168.83.128
     dbServers:
       hosts:
         webrepo.solitude.skyrim:
@@ -71,7 +71,7 @@ all:
     ceServers:
       hosts:
         ce01:
-          ansible_host: 172.16.170.177
+          ansible_host: 192.168.83.128
     conServers:
       hosts:
         docker02.solitude.skyrim:
@@ -87,11 +87,11 @@ all:
     ssTlsCerts:
       hosts:
         ssTlsEnrollmentCa:
-          ansible_host: 172.16.170.170 
+          ansible_host: 172.16.170.170
     ssCsrCerts:
       hosts:
         ssCsrEnrollmentCa:
-          ansible_host: 172.16.170.170   
+          ansible_host: 172.16.170.170
     httpdServers:
       children:
         eeCaServers:

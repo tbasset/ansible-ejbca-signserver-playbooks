@@ -16,7 +16,7 @@ httpd_cert_files:
 add_mgmt_ca: true
 
 # Create CRL and AIA folder symbolic links for webserver to host these files
-httpd_create_aia_crl_dir: false
+httpd_create_aia_crl_dir: true
 
 # Create the folder structure for CRL's and AIA files when httpd_create_aia_crl_dir is true
 httpd_web_dirs:

@@ -1,9 +1,9 @@
 ---
 
-hostname: ce01.solitude.skyrim
+hostname: ce01.meow.cat
 
 # Dirty hack to tell the type of instance till something better is used
-#ejbca_type: CA
+# ejbca_type: CA
 
 # Info to create HTTPD end entity in EJBCA for the TLS certificate
 identity_info:
@@ -40,7 +40,6 @@ management_add_administrators:
     caname: "ManagementCA"
     match_with: "WITH_COMMONNAME"
     match_value: "{{ superAdminCn }}"
-
 
 # List of certification authorities that should be added using CLI
 # caname: CA name

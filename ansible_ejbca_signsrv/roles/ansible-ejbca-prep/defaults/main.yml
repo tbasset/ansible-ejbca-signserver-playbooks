@@ -12,10 +12,10 @@
 #ejbca_jdbc_remote_dir: ~/Downloads/PK-Software/mariadb-java-client-2.7.2.jar
 #ejbca_jdbc_gen_name: "{{ appsrv_datasources[0].database_jar_filename }}"
 
-#apache_ant_remote_dir: ~/Downloads/PK-Software/apache-ant-1.10.11-bin.tar.gz
-#ant_version: apache-ant-1.10.11-bin.tar.gz
-#ant_url: "https://mirror.olnevhost.net/pub/apache/ant/binaries/{{ ant_version }}" 
-#ant_checksum: sha256:0a3dc4624c863657daa609051763f12bfd286bc6da1d61ca48959ce3b94be0e7
+apache_ant_remote_dir: ~/Downloads/PK-Software/apache-ant-1.10.11-bin.tar.gz
+ant_version: apache-ant-1.10.11-bin.tar.gz
+ant_url: "https://mirror.olnevhost.net/pub/apache/ant/binaries/{{ ant_version }}" 
+ant_checksum: sha256:0a3dc4624c863657daa609051763f12bfd286bc6da1d61ca48959ce3b94be0e7
 
 #ejbca_manage_user: true
 #ejbca_group: wildfly

@@ -4,12 +4,12 @@
 #ansible_python_interpreter: /usr/bin/python3
 
 # Configure the Orgnaization variables used for templating DN's and FQDN's
-organizationName: Solitude
+organizationName: Meow
 organizationNameShort: "{{ organizationName }}"
 organizationNameCRL: "{{ organizationName }}"
-organizationDomainName: solitude.skyrim
+organizationDomainName: meow.cat
 countryName: US
-superAdminCn: "Skyrim-Keyfactor-SA"
+superAdminCn: "Felix-Meow-Corp"
 sharedVarsLocation: ~/ansible/ansibleCacheDir
 
 # Deployment locations for all the servers
@@ -62,7 +62,8 @@ ant_url: "https://mirror.olnevhost.net/pub/apache/ant/binaries/{{ ant_version }}
 ant_checksum: sha256:4b3b557279bae4fb80210a5679180fdae3498b44cfd13368e3386e2a21dd853b
 
 # JDBC driver when sourcing locally instead of downloading
-ejbca_jdbc_remote_dir: ~/Downloads/PK-Software/mariadb-java-client-2.7.2.jar
+#ejbca_jdbc_remote_dir: ~/Downloads/PK-Software/mariadb-java-client-2.7.2.jar
+ejbca_jdbc_remote_dir: ~/Downloads/PK-Software/mariadb-java-client-2.7.7.jar
 ejbca_jdbc_gen_name: "{{ appsrv_datasources[0].database_jar_filename }}"
 
 # CA chains to add to the HTTPD trusted CA certificate file for certauth
